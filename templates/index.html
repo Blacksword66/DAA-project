@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Vehicle Path Planning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Optimal Path Planning for Autonomous Vehicles</h1>
+            <p class="subtitle">Enter the network details to simulate the path planning</p>
+
+            <form action="/run_simulation" method="POST">
+                <div class="field">
+                    <label class="label">Source Node</label>
+                    <div class="control">
+                        <input class="input" type="number" name="source" placeholder="Enter source node (0 to 4)" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Sink Node</label>
+                    <div class="control">
+                        <input class="input" type="number" name="sink" placeholder="Enter sink node (0 to 4)" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <button class="button is-primary" type="submit">Run Simulation</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

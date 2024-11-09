@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation Results</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Simulation Results</h1>
+
+            <div class="box">
+                <h2 class="subtitle">Maximum Flow</h2>
+                <p>The maximum flow from the source to the sink is: <strong>{{ max_flow }}</strong></p>
+            </div>
+
+            <div class="box">
+                <h2 class="subtitle">Shortest Path</h2>
+                <p>The shortest path distance from the source to each node:</p>
+                <ul>
+                    {% for node, distance in shortest_path.items() %}
+                        <li>Node {{ node }}: <strong>{{ distance }}</strong></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2 class="subtitle">Graph Visualization</h2>
+                <figure class="image is-3by2">
+                    <img src="{{ graph_image_path }}" alt="Graph Visualization">
+                </figure>
+            </div>
+
+            <div class="buttons">
+                <a class="button is-link" href="/">Run Another Simulation</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
